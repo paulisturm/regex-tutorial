@@ -1,10 +1,14 @@
 # Matching an Email Regex Tutorial
 
-Introductory paragraph (replace this with your text)
+This tutorial was created to help explain the function, features, and all the components of a Matching an Email Regex. Regex, or Regular Expression, is a sequence of characters used to help locate, validate or replace text. These character sequences are used in programing to identify strings. 
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+This specific tutorial will focus on Regex used to match an email. It looks like this.
+
+ /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/
+
+This specific sequence of characters can be used to discern whether a string of characters is an email or not.
 
 ## Table of Contents
 
@@ -20,12 +24,26 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+Anchors in Regex are used to match the placement of the characters in the string. the two anchor characters are "^" and "$". the string will begin with a "^" and all characters to the right of it, will be taken into account. The "$" denotes the ending of the string.
 
 ### Quantifiers
+Quantifiers in Regex determines the number of times a character must appear. The characters required are to the left of the quantifier. in this specific regex here is an example of one of the  quantifiers. 
+
+/^([a-z0-9_.-]+)
+
+The quantifier is the "+" located at the end of the string. these signs require that the strings being tested must contain at least one of the preceeding characters.
 
 ### Grouping Constructs
+Grouping constructs are what divides the Regex into sections. this constructs are defined by parenthesis "()" at the begining and end each section. This specific Regex has three groups.
+
+([a-z0-9_.-]+)   ,    ([\da-z\.-]+)    and    ([a-z\.]{2,6})
+
+When this Regex is determining whether or not a string is an email it will look at these three groups and determine if the specified character are being used, and if they are used in the required amount.
 
 ### Bracket Expressions
+Bracket Expressions are used to show character classes. Located inside of each of our Grouping constructs are the characters that we are able to use. For example,
+
+our first grouping construct ([a-z0-9_\.-]+), contains a Bracket Expression. inside that expression "a-z" means that all letters of the alphabet may be used. "0-9" means that all numbers may be used. this expression also include the characters "\.-", so they may be used as well.
 
 ### Character Classes
 
