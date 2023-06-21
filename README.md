@@ -43,7 +43,7 @@ When this Regex is determining whether or not a string is an email it will look 
 ### Bracket Expressions
 Bracket Expressions are used to show character classes. Located inside of each of our Grouping constructs are the characters that we are able to use. For example,
 
-our first grouping construct ([a-z0-9_\.-]+), contains a Bracket Expression. inside that expression "a-z" means that all letters of the alphabet may be used. "0-9" means that all numbers may be used. this expression also include the characters "\.-", so they may be used as well.
+our first grouping construct ([a-z0-9_\.-]+), contains a Bracket Expression. this expression holds the Character Classes that our regex will be looking for.
 
 ### Character Classes
 
