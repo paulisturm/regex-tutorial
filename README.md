@@ -17,7 +17,6 @@ This specific sequence of characters can be used to discern whether a string of 
 - [Grouping Constructs](#grouping-constructs)
 - [Bracket Expressions](#bracket-expressions)
 - [Character Classes](#character-classes)
-- [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
@@ -46,12 +45,15 @@ Bracket Expressions are used to show character classes. Located inside of each o
 our first grouping construct ([a-z0-9_\.-]+), contains a Bracket Expression. this expression holds the Character Classes that our regex will be looking for.
 
 ### Character Classes
+Character Classes in a REGEX are included in order to tell the engine to choose one of several characters. A list of characters will appear between brackets, and the engine will search for those specific characters. A hyphen "-" may also be included. this tells the REGEX that it is to search for a range of characters. For example.
 
-### The OR Operator
+[a-z0-9_.-] , this bracket expressions includes "a-z" and "0-9", so all letters and numbers will be accepted.
 
 ### Flags
+Flags are single characters that are used to modify how the engine reads a string. They can be found after the final slash of the REGEX. for instance, a letter "i" at the end of the REGEX will tell the engine not to worry about the case of the letter that is typed in.
 
 ### Character Escapes
+Character Escapes are used when you want the engine to search for a specific character, but that character is one that is commonly used in REGEX. for example "^" is used as an achor, so if you want your engine to search for that specific character it would have to be located in parentheses     "(^)". when that happens the engine will not confuse that character for an anchor.
 
 ## Author
 
